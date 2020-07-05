@@ -1,0 +1,66 @@
+swagger: "2.0"
+info:
+  description: sample code
+  version: "1.0.0"
+  title: Swagger REST
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /order:
+    post:
+      operationId: "fruit.post"
+      tags:
+        - "Fruit"
+      summary: "fruit db"
+      description: "post fruit order"
+      parameters:
+        - in: body
+          name: entry
+          schema:
+            type: object
+            required:
+              - date
+              - fruits
+            properties:
+              date: 
+                type: integer
+              fruits:
+                type: object
+      responses:
+        201:
+          description: "Successful posted order operation"
+          
+  /report:
+    get:
+      operationId: "fruit.get"
+      tags:
+        - "Fruit"
+      summary: "fruit db"
+      description: "get fruit order date range"
+      parameters:
+        - name: from
+          in: query
+          type: integer
+          required: true
+        - name: to
+          in: query
+          type: integer
+          required: true
+      responses:
+        200:
+          description: "Successful posted order operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                data:
+                  type: "array"
+
+                        
+                  

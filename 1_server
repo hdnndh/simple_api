@@ -1,0 +1,2 @@
+sudo xhost + && sudo docker run -ti --gpus all --rm -e DISPLAY=:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v "$PWD"/sharedVolume:/sharedVolume -p 5000:5000 neura1/base_server:latest bash
+
