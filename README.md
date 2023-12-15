@@ -1,6 +1,6 @@
 # Sample API - Docker, Flask, Marshmallow, SQLAlchemy
 
-   This project is a **dockerized**, meant to develop a portalbe **workspace** and **deployment** container for sample serverside code written in **Flask** and with **SQlite3** backend.
+   This project is a **dockerized**, meant to develop a portalbe **workspace** and **deployment** container for sample serverside code written in **Flask** and with **SQlite3** backend with GPU-ready docker
    
 ## Introduction
 * **Dependencies:**
